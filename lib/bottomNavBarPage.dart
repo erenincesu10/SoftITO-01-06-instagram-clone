@@ -54,7 +54,14 @@ class _myBottomNavBarState extends State<myBottomNavBar> {
             icon: Icon(Icons.search),
             label: "",
             activeIcon: Icon(CupertinoIcons.search)),
-        BottomNavigationBarItem(icon: Icon(Icons.add_box_outlined), label: ""),
+        BottomNavigationBarItem(
+            icon: IconButton(
+              icon: Icon(Icons.add_box_outlined),
+              onPressed: () {
+                print("upload screen opened");
+              },
+            ),
+            label: ""),
         BottomNavigationBarItem(
             icon: Icon(Icons.movie_filter_outlined),
             label: "",
