@@ -1,3 +1,3 @@
-# SoftITO_Grup
+# SoftITO_01_06
 
 * Grup Kodlarımız
