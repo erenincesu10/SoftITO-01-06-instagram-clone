@@ -59,6 +59,7 @@ class _myBottomNavBarState extends State<myBottomNavBar> {
               icon: Icon(Icons.add_box_outlined),
               onPressed: () {
                 print("upload screen opened");
+                //test code for button works
               },
             ),
             label: ""),
