@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:instagram_clone/components/discovery_gridview.dart';
+import 'package:instagram_clone/components/profile_page.dart';
 
 // ignore: camel_case_types
 class myBottomNavBar extends StatefulWidget {
@@ -62,10 +63,18 @@ class _myBottomNavBarState extends State<myBottomNavBar> {
             icon: Icon(Icons.movie_filter_outlined),
             label: "",
             activeIcon: Icon(Icons.movie_filter)),
-        const BottomNavigationBarItem(
-            icon: Icon(Icons.account_circle_outlined),
+        BottomNavigationBarItem(
+            icon: IconButton(
+              icon: const Icon(Icons.account_circle_outlined),
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const ProfilePage()));
+              },
+            ),
             label: "",
-            activeIcon: Icon(Icons.account_circle))
+            activeIcon: const Icon(Icons.account_circle))
       ],
     );
   }
