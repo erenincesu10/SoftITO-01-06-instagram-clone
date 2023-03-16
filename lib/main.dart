@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+
 import 'package:instagram_clone/components/bottomNavBarPage.dart';
 import 'package:instagram_clone/components/instagram_stories.dart';
 import 'package:instagram_clone/components/timeline_appbar.dart';
+
 import 'package:instagram_clone/pages/discovery_page/discovery_page.dart';
 import 'package:instagram_clone/services/providers/search_bar_view_model.dart';
 import 'package:provider/provider.dart';
@@ -36,7 +38,7 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       backgroundColor: Colors.black,
       body: DiscoveryPage(),
       bottomNavigationBar: myBottomNavBar(),
