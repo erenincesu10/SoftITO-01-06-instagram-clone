@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:instagram_clone/components/timeline_post.dart';
 
 class StoriesInstagram extends StatelessWidget {
   const StoriesInstagram({super.key});
@@ -85,6 +86,10 @@ class StoriesInstagram extends StatelessWidget {
       //         );
       //       })),
       // ),
+      Divider(
+        color: Colors.grey,
+      ),
+      Expanded(child: TimeLinePost())
     ]);
   }
 }

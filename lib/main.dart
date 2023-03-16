@@ -3,6 +3,7 @@ import 'package:instagram_clone/app_init.dart';
 import 'package:instagram_clone/components/bottomNavBarPage.dart';
 import 'package:instagram_clone/components/instagram_stories.dart';
 import 'package:instagram_clone/components/timeline_appbar.dart';
+import 'package:instagram_clone/components/timeline_post.dart';
 
 void main() {
   runApp(const MyApp());
