@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:instagram_clone/components/instagram_stories.dart';
 import 'package:instagram_clone/components/bottomNavBarPage.dart';
 
 void main() {
@@ -15,7 +14,6 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-      
         primarySwatch: Colors.blue,
       ),
       home: bottomNavBarPage(),
