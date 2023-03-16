@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:instagram_clone/components/timeline_appbar.dart';
-import 'package:instagram_clone/instagram_stories.dart';
+import 'package:instagram_clone/components/instagram_stories.dart';
 
 void main() {
   runApp(const MyApp());
@@ -34,7 +33,6 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black,
-      appBar: TimelineAppbar(),
       body: StoriesInstagram(),
     );
   }
