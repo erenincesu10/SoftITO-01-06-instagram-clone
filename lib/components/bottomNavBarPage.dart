@@ -3,23 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 
-class bottomNavBarPage extends StatefulWidget {
-  const bottomNavBarPage({super.key});
-
-  @override
-  State<bottomNavBarPage> createState() => _bottomNavBarPageState();
-}
-
-class _bottomNavBarPageState extends State<bottomNavBarPage> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.white,
-      bottomNavigationBar: myBottomNavBar(),
-    );
-  }
-}
-
 class myBottomNavBar extends StatefulWidget {
   const myBottomNavBar({super.key});
 
