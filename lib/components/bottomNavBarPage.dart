@@ -2,7 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
-import 'package:instagram_clone/components/discovery_gridview.dart';
 
 // ignore: camel_case_types
 class myBottomNavBar extends StatefulWidget {
@@ -39,12 +38,7 @@ class _myBottomNavBarState extends State<myBottomNavBar> {
         BottomNavigationBarItem(
           icon: IconButton(
             icon: const Icon(Icons.search),
-            onPressed: () {
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => const GridDiscovery()));
-            },
+            onPressed: () {},
           ),
           label: "",
           activeIcon: Icon(CupertinoIcons.search),
