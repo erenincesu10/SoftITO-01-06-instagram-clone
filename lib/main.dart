@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:instagram_clone/bottomNavBarPage.dart';
+import 'package:instagram_clone/components/bottomNavBarPage.dart';
 
 void main() {
   runApp(const MyApp());
