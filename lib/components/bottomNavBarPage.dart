@@ -2,7 +2,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:instagram_clone/components/discovery_gridview.dart';
 
+// ignore: camel_case_types
 class myBottomNavBar extends StatefulWidget {
   const myBottomNavBar({super.key});
 
@@ -10,6 +12,7 @@ class myBottomNavBar extends StatefulWidget {
   State<myBottomNavBar> createState() => _myBottomNavBarState();
 }
 
+// ignore: camel_case_types
 class _myBottomNavBarState extends State<myBottomNavBar> {
   int _selectedIndex = 0;
   void _onTapped(int index) {
@@ -29,28 +32,37 @@ class _myBottomNavBarState extends State<myBottomNavBar> {
       unselectedItemColor: Colors.white,
       selectedItemColor: Colors.white,
       items: [
-        BottomNavigationBarItem(
+        const BottomNavigationBarItem(
           icon: Icon(Icons.home_filled),
           label: "",
         ),
         BottomNavigationBarItem(
-            icon: Icon(Icons.search),
-            label: "",
-            activeIcon: Icon(CupertinoIcons.search)),
+          icon: IconButton(
+            icon: const Icon(Icons.search),
+            onPressed: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const GridDiscovery()));
+            },
+          ),
+          label: "",
+          activeIcon: Icon(CupertinoIcons.search),
+        ),
         BottomNavigationBarItem(
             icon: IconButton(
-              icon: Icon(Icons.add_box_outlined),
+              icon: const Icon(Icons.add_box_outlined),
               onPressed: () {
-                print("upload screen opened");
+                print("clicked");
                 //test code for button works
               },
             ),
             label: ""),
-        BottomNavigationBarItem(
+        const BottomNavigationBarItem(
             icon: Icon(Icons.movie_filter_outlined),
             label: "",
             activeIcon: Icon(Icons.movie_filter)),
-        BottomNavigationBarItem(
+        const BottomNavigationBarItem(
             icon: Icon(Icons.account_circle_outlined),
             label: "",
             activeIcon: Icon(Icons.account_circle))
