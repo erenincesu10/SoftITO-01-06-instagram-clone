@@ -1,14 +1,14 @@
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 
-class Igtv extends StatefulWidget {
-  const Igtv({super.key});
+class Recorded extends StatefulWidget {
+  const Recorded({super.key});
 
   @override
-  State<Igtv> createState() => _IgtvState();
+  State<Recorded> createState() => _RecordedState();
 }
 
-class _IgtvState extends State<Igtv> {
+class _RecordedState extends State<Recorded> {
   @override
   Widget build(BuildContext context) {
     return const Placeholder();
