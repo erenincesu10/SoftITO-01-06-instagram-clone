@@ -65,6 +65,8 @@ flutter:
   assets:
     - assets/
     - assets/instagram.png
+    - assets/icons/reelss.png
+    - assets/icons/ıgtv.png
     - assets/sehinsah.jpeg
     - assets/icons/story.png
     - assets/icons/message.png
