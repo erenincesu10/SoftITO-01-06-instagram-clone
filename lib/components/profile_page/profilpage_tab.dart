@@ -1,11 +1,7 @@
-import 'package:faker/faker.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:instagram_clone/components/recorded_screen.dart';
-
-import '../widgets/profileHeaderWidget.dart';
-import 'gallery_screen.dart';
+import '../../widgets/profileHeaderWidget.dart';
+import '../timeline_post.dart';
 
 class ProfilPageTab extends StatefulWidget {
   const ProfilPageTab({super.key});
@@ -29,7 +25,7 @@ class _ProfilPageTabState extends State<ProfilPageTab> {
           ];
         },
         body: Column(
-          children: [
+          children: const [
             Material(
               color: Colors.black,
               child: TabBar(
@@ -55,7 +51,7 @@ class _ProfilPageTabState extends State<ProfilPageTab> {
             ),
             Expanded(
                 child: TabBarView(
-              children: [Gallery(), Recorded()],
+              children: [TimeLinePost(), Recorded()],
             ))
           ],
         ),

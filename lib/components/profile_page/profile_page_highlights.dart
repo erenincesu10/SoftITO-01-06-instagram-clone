@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:instagram_clone/components/bottomNavBarPage.dart';
+import 'package:instagram_clone/components/profile_page/profile_appbar.dart';
 
 class ProfilePageHighlights extends StatefulWidget {
   const ProfilePageHighlights({super.key});
@@ -9,25 +11,25 @@ class ProfilePageHighlights extends StatefulWidget {
 
 class _ProfilePageHighlightsState extends State<ProfilePageHighlights> {
   @override
+  // final width = MediaQuery.of(context).size.width;
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      scrollDirection: Axis.horizontal,
-      child: Padding(
+    return Scaffold(
+      appBar: ProfileAppBar(),
+      bottomNavigationBar: myBottomNavBar(),
+      body: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Container(
           width: MediaQuery.of(context).size.width,
-          child: Expanded(
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                HighlightUser(),
-                HighlightUser(),
-                HighlightUser(),
-                HighlightUser(),
-                HighlightUser(),
-                HighlightAdd(),
-              ],
-            ),
+          child: ListView(
+            scrollDirection: Axis.horizontal,
+            children: [
+              HighlightUser(),
+              HighlightUser(),
+              HighlightUser(),
+              HighlightUser(),
+              HighlightUser(),
+              HighlightAdd(),
+            ],
           ),
         ),
       ),
@@ -41,7 +43,8 @@ Widget HighlightAdd() {
       Container(
         width: 60,
         height: 60,
-        decoration: BoxDecoration(shape: BoxShape.circle, color: Colors.grey),
+        decoration:
+            const BoxDecoration(shape: BoxShape.circle, color: Colors.grey),
         child: Center(
           child: TextButton(
               style: TextButton.styleFrom(
@@ -49,14 +52,14 @@ Widget HighlightAdd() {
                   shape: CircleBorder(),
                   fixedSize: Size(55, 55)),
               onPressed: () {},
-              child: Icon(
+              child: const Icon(
                 Icons.add,
                 color: Colors.white,
                 size: 30,
               )),
         ),
       ),
-      Text(
+      const Text(
         "Yeni",
         style: TextStyle(),
       )
@@ -65,30 +68,34 @@ Widget HighlightAdd() {
 }
 
 Widget HighlightUser() {
-  return Column(
-    children: [
-      Stack(
-        alignment: Alignment.center,
+  return SafeArea(
+    child: Container(
+      child: Column(
         children: [
-          Container(
-            width: 60,
-            height: 60,
-            decoration:
-                BoxDecoration(color: Colors.grey, shape: BoxShape.circle),
+          Stack(
+            alignment: Alignment.center,
+            children: [
+              Container(
+                width: 60,
+                height: 60,
+                decoration: const BoxDecoration(
+                    color: Colors.grey, shape: BoxShape.circle),
+              ),
+              const CircleAvatar(
+                radius: 28,
+                foregroundImage: AssetImage("assets/sehinsah.jpeg"),
+              )
+            ],
           ),
-          CircleAvatar(
-            radius: 28,
-            foregroundImage: AssetImage("assets/sehinsah.jpeg"),
+          const SizedBox(
+            height: 3,
+          ),
+          const Text(
+            "Me",
+            style: TextStyle(color: Colors.black),
           )
         ],
       ),
-      SizedBox(
-        height: 3,
-      ),
-      Text(
-        "Me",
-        style: TextStyle(color: Colors.black),
-      )
-    ],
+    ),
   );
 }

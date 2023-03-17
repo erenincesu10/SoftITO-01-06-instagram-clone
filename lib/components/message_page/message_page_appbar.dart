@@ -9,11 +9,11 @@ PreferredSizeWidget MessagePageAppBar() {
     title: DropdownButton(
         underline: Container(),
         iconDisabledColor: Colors.white,
-        icon: Icon(
+        icon: const Icon(
           CupertinoIcons.chevron_down,
           size: 20,
         ),
-        items: [
+        items: const [
           DropdownMenuItem(
               child: Text(
             "Username",
@@ -24,13 +24,13 @@ PreferredSizeWidget MessagePageAppBar() {
     actions: [
       IconButton(
           onPressed: () {},
-          icon: Icon(
+          icon: const Icon(
             CupertinoIcons.video_camera,
             size: 30,
           )),
       IconButton(
           onPressed: () {},
-          icon: Icon(
+          icon: const Icon(
             CupertinoIcons.square_pencil,
             size: 26,
           ))
