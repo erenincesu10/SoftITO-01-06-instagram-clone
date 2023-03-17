@@ -20,7 +20,7 @@ class StoriesInstagram extends StatelessWidget {
                   Container(
                     width: 80,
                     height: 80,
-                    padding: EdgeInsets.all(3),
+                    padding: const EdgeInsets.all(3),
                     decoration: const BoxDecoration(
                         shape: BoxShape.circle,
                         gradient: LinearGradient(
@@ -30,8 +30,8 @@ class StoriesInstagram extends StatelessWidget {
                     child: Container(
                       width: 60,
                       height: 60,
-                      padding: EdgeInsets.all(1),
-                      decoration: BoxDecoration(
+                      padding: const EdgeInsets.all(1),
+                      decoration: const BoxDecoration(
                           color: Colors.white,
                           shape: BoxShape.circle,
                           boxShadow: [
@@ -49,7 +49,7 @@ class StoriesInstagram extends StatelessWidget {
                               Container(
                                 width: 65,
                                 height: 65,
-                                decoration: BoxDecoration(
+                                decoration: const BoxDecoration(
                                   shape: BoxShape.circle,
                                   image: DecorationImage(
                                       image: NetworkImage(
@@ -62,7 +62,7 @@ class StoriesInstagram extends StatelessWidget {
                       ),
                     ),
                   ),
-                  Text(
+                  const Text(
                     "kaan",
                     style: TextStyle(color: Colors.white),
                   )
@@ -86,10 +86,10 @@ class StoriesInstagram extends StatelessWidget {
       //         );
       //       })),
       // ),
-      Divider(
+      const Divider(
         color: Colors.grey,
       ),
-      Expanded(child: TimeLinePost())
+      const Expanded(child: TimeLinePost())
     ]);
   }
 }

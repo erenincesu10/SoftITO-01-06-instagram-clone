@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
+
 import 'package:instagram_clone/components/profile_page/profile_page_highlights.dart';
 
 class ProfilePage extends StatefulWidget {
@@ -13,11 +12,7 @@ class ProfilePage extends StatefulWidget {
 class _ProfilePageState extends State<ProfilePage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.black,
-        title: Text("My Profile Page"),
-      ),
+    return const Scaffold(
       body: ProfilePageHighlights(),
     );
   }

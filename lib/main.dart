@@ -3,7 +3,7 @@ import 'package:instagram_clone/app_init.dart';
 import 'package:instagram_clone/components/bottomNavBarPage.dart';
 import 'package:instagram_clone/components/instagram_stories.dart';
 import 'package:instagram_clone/components/instragram_status.dart';
-import 'package:instagram_clone/components/profilpage_tab.dart';
+import 'package:instagram_clone/components/profile_page/profilpage_tab.dart';
 import 'package:instagram_clone/components/timeline_appbar.dart';
 import 'package:instagram_clone/components/timeline_post.dart';
 import 'package:instagram_clone/view/profile_page/profile_page.dart';
@@ -39,7 +39,7 @@ class _MyHomePageState extends State<MyHomePage> {
     return const Scaffold(
       backgroundColor: Colors.black,
       appBar: TimelineAppbar(),
-      body: ProfilePage(),
+      body: StoriesInstagram(),
       bottomNavigationBar: myBottomNavBar(),
     );
   }
