@@ -8,13 +8,16 @@ import 'package:instagram_clone/components/timeline_appbar.dart';
 import 'package:instagram_clone/components/timeline_post.dart';
 import 'package:instagram_clone/view/discovery_page/discovery_page.dart';
 import 'package:instagram_clone/view/profile_page/profile_page.dart';
+import 'package:instagram_clone/view/reels_page/reels_page.dart';
+import 'package:instagram_clone/view_models/reels_page_view_model.dart';
 import 'package:instagram_clone/view_models/search_bar_view_model.dart';
 import 'package:provider/provider.dart';
 
 void main() {
-  runApp(MultiProvider(
-      providers: [ChangeNotifierProvider(create: (_) => SearchBarViewModel())],
-      child: const MyApp()));
+  runApp(MultiProvider(providers: [
+    ChangeNotifierProvider(create: (_) => SearchBarViewModel()),
+    ChangeNotifierProvider(create: (_) => ReelsPageViewModel())
+  ], child: const MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -43,8 +46,8 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return const Scaffold(
       backgroundColor: Colors.black,
-      appBar: TimelineAppbar(),
-      body: DiscoveryPage(),
+      //appBar: TimelineAppbar(),
+      body: ReelsPage(),
       bottomNavigationBar: myBottomNavBar(),
     );
   }
