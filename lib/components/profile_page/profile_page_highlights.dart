@@ -24,6 +24,7 @@ class _ProfilePageHighlightsState extends State<ProfilePageHighlights> {
                 HighlightUser(),
                 HighlightUser(),
                 HighlightUser(),
+                HighlightUser(),
                 HighlightAdd(),
               ],
             ),
