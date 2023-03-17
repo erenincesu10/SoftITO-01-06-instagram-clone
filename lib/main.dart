@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(),
-      home: const AppInit(),
+      home: AppInit(),
     );
   }
 }
@@ -46,7 +46,7 @@ class _MyHomePageState extends State<MyHomePage> {
     return const Scaffold(
       backgroundColor: Colors.black,
       appBar: TimelineAppbar(),
-      body: ProfilUserWidget(),
+      body: StoriesInstagram(),
       bottomNavigationBar: myBottomNavBar(),
     );
   }
