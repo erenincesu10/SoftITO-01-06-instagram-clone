@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-PreferredSizeWidget messagePageAppBar() {
+PreferredSizeWidget MessagePageAppBar() {
   return AppBar(
     leadingWidth: 25,
     backgroundColor: Colors.black,
