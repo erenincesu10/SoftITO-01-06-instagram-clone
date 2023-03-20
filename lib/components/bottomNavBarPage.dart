@@ -39,7 +39,6 @@ class _myBottomNavBarState extends State<myBottomNavBar> {
           _selectedIndex = index;
           context.read<NavigatorViewModel>().setIndex(index);
           //print(_selectedIndex);
-          print(context.read<NavigatorViewModel>().getCurrentIndex);
         });
       },
       type: BottomNavigationBarType.fixed,
@@ -48,15 +47,19 @@ class _myBottomNavBarState extends State<myBottomNavBar> {
       selectedItemColor: Colors.white,
       items: [
         BottomNavigationBarItem(
-          icon: Icon(Icons.home_filled),
-          label: "",
-        ),
+            icon: Icon(CupertinoIcons.home),
+            label: "",
+            activeIcon: Icon(Icons.home_filled)),
         BottomNavigationBarItem(
           icon: Icon(Icons.search),
           label: "",
           activeIcon: const Icon(CupertinoIcons.search),
         ),
-        BottomNavigationBarItem(icon: Icon(Icons.add_box_outlined), label: ""),
+        BottomNavigationBarItem(
+            icon: IconButton(
+                icon: Icon(Icons.add_box_outlined),
+                onPressed: () => print("basıldı")),
+            label: ""),
         BottomNavigationBarItem(
             icon: Icon(Icons.movie_filter_outlined),
             label: "",

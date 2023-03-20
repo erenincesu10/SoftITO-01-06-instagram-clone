@@ -55,8 +55,8 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
-      body: pages[context.read<NavigatorViewModel>().getCurrentIndex],
+      //backgroundColor: Colors.black,
+      body: pages[context.watch<NavigatorViewModel>().getCurrentIndex],
       //bottomNavigationBar: myBottomNavBar(),
     );
   }
