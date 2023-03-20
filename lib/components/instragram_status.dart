@@ -15,7 +15,7 @@ class _MessagePageStatusState extends State<MessagePageStatus> {
   @override
   Widget build(BuildContext context) {
     return Column(children: [
-      SizedBox(
+      const SizedBox(
         height: 100,
       ),
       SingleChildScrollView(
@@ -37,18 +37,19 @@ class _MessagePageStatusState extends State<MessagePageStatus> {
                       width: 100,
                       height: 100,
                       //padding: EdgeInsets.all(),
-                      decoration:
-                          BoxDecoration(shape: BoxShape.circle, boxShadow: [
-                        BoxShadow(
-                          color: Colors.black,
-                        )
-                      ]),
+                      decoration: const BoxDecoration(
+                          shape: BoxShape.circle,
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black,
+                            )
+                          ]),
                       child: Column(
                         children: [
                           Container(
                             width: 200,
                             height: 100,
-                            decoration: BoxDecoration(
+                            decoration: const BoxDecoration(
                               shape: BoxShape.circle,
                               image: DecorationImage(
                                   scale: 20,

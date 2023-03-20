@@ -4,8 +4,13 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:go_router/go_router.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:instagram_clone/components/profile_page/profile_page_highlights.dart';
+import 'package:instagram_clone/components/profile_page/profilpage_tab.dart';
 import 'package:instagram_clone/main.dart';
+
+import 'explore_page/discovery_gridview.dart';
 
 // ignore: camel_case_types
 class myBottomNavBar extends StatefulWidget {
@@ -79,17 +84,33 @@ class _myBottomNavBarState extends State<myBottomNavBar> {
       unselectedItemColor: Colors.white,
       selectedItemColor: Colors.white,
       items: [
-        const BottomNavigationBarItem(
-          icon: Icon(Icons.home_filled),
+        BottomNavigationBarItem(
+          icon: IconButton(
+            icon: const Icon(Icons.home_filled),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => MyHomePage(),
+                ),
+              );
+            },
+          ),
           label: "",
         ),
         BottomNavigationBarItem(
           icon: IconButton(
-            icon: const Icon(Icons.search),
-            onPressed: () {},
-          ),
+              icon: const Icon(Icons.search),
+              onPressed: () => {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => GridDiscovery(),
+                      ),
+                    ),
+                  }),
           label: "",
-          activeIcon: Icon(CupertinoIcons.search),
+          activeIcon: const Icon(CupertinoIcons.search),
         ),
         BottomNavigationBarItem(
             icon: IconButton(
@@ -123,10 +144,18 @@ class _myBottomNavBarState extends State<myBottomNavBar> {
             icon: Icon(Icons.movie_filter_outlined),
             label: "",
             activeIcon: Icon(Icons.movie_filter)),
-        const BottomNavigationBarItem(
-            icon: Icon(Icons.account_circle_outlined),
+        BottomNavigationBarItem(
+            icon: IconButton(
+              icon: const Icon(Icons.account_circle_outlined),
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => ProfilePageHighlights()));
+              },
+            ),
             label: "",
-            activeIcon: Icon(Icons.account_circle))
+            activeIcon: const Icon(Icons.account_circle))
       ],
     );
   }
