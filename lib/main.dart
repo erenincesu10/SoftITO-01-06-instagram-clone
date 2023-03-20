@@ -10,6 +10,7 @@ import 'package:instagram_clone/components/timeline_post.dart';
 import 'package:instagram_clone/view/discovery_page/discovery_page.dart';
 import 'package:instagram_clone/view/profile_page/profile_page.dart';
 import 'package:instagram_clone/view/reels_page/reels_page.dart';
+import 'package:instagram_clone/view_models/navigator_view_model.dart';
 import 'package:instagram_clone/view_models/reels_page_view_model.dart';
 import 'package:instagram_clone/view_models/search_bar_view_model.dart';
 import 'package:provider/provider.dart';
@@ -17,8 +18,9 @@ import 'package:provider/provider.dart';
 void main() {
   runApp(MultiProvider(providers: [
     ChangeNotifierProvider(create: (_) => SearchBarViewModel()),
-    ChangeNotifierProvider(create: (_) => ReelsPageViewModel())
-  ], child: const MyApp()));
+    ChangeNotifierProvider(create: (_) => ReelsPageViewModel()),
+    ChangeNotifierProvider(create: (_) => NavigatorViewModel())
+  ], child: MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -30,7 +32,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(),
-      home: const AppInit(),
+      home: AppInit(),
     );
   }
 }
@@ -43,13 +45,19 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  List<Widget> pages = [
+    StoriesInstagram(),
+    DiscoveryPage(),
+    Container(),
+    ReelsPage(),
+    ProfilePage()
+  ];
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       backgroundColor: Colors.black,
-      appBar: TimelineAppbar(),
-      body: StoriesInstagram(),
-      bottomNavigationBar: myBottomNavBar(),
+      body: pages[context.read<NavigatorViewModel>().getCurrentIndex],
+      //bottomNavigationBar: myBottomNavBar(),
     );
   }
 }

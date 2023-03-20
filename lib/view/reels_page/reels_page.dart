@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:instagram_clone/components/bottomNavBarPage.dart';
 import 'package:instagram_clone/components/reels_page/reels_page_appbar.dart';
 import 'package:instagram_clone/view_models/reels_page_view_model.dart';
 import 'package:provider/provider.dart';
@@ -22,6 +23,7 @@ class _ReelsPageState extends State<ReelsPage> {
     return Scaffold(
       //appBar: ReelsAppBar(),
       backgroundColor: Colors.black,
+      bottomNavigationBar: myBottomNavBar(),
       body: SafeArea(
         child: PageView(
           scrollDirection: Axis.vertical,
