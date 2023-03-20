@@ -4,7 +4,6 @@ import 'package:instagram_clone/components/bottomNavBarPage.dart';
 import 'package:instagram_clone/components/instagram_stories.dart';
 import 'package:instagram_clone/components/instragram_status.dart';
 import 'package:instagram_clone/components/notification_page.dart';
-import 'package:instagram_clone/components/profiluser_widgets.dart';
 import 'package:instagram_clone/components/timeline_appbar.dart';
 import 'package:instagram_clone/components/timeline_post.dart';
 import 'package:instagram_clone/view/discovery_page/discovery_page.dart';

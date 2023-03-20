@@ -7,8 +7,7 @@ class TimelineViewModel extends ChangeNotifier {
 
   Future getListData() async {
     await Future.delayed(Duration(seconds: 2));
-    int count =
-        Faker().randomGenerator.integer(100, min: 30);
+    int count = Faker().randomGenerator.integer(100, min: 30);
     for (var i = 0; i < count; i++) {
       posts.add(PostModel.fake());
     }

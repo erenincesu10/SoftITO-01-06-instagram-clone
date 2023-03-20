@@ -6,6 +6,7 @@ class ProfileAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black,
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(40),
         child: Container(

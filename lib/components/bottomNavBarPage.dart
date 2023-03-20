@@ -8,6 +8,7 @@ import 'package:go_router/go_router.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:instagram_clone/components/profile_page/profile_page_highlights.dart';
 import 'package:instagram_clone/components/profile_page/profilpage_tab.dart';
+import 'package:instagram_clone/components/profiluser_widgets.dart';
 import 'package:instagram_clone/main.dart';
 
 import 'explore_page/discovery_gridview.dart';
@@ -151,7 +152,7 @@ class _myBottomNavBarState extends State<myBottomNavBar> {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => ProfilePageHighlights()));
+                        builder: (context) => ProfilUserWidget()));
               },
             ),
             label: "",
