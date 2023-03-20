@@ -19,23 +19,24 @@ class TimeLinePost extends StatelessWidget {
                   decoration: BoxDecoration(
                       shape: BoxShape.circle,
                       border: Border.all(),
-                      image: DecorationImage(
+                      image: const DecorationImage(
                           image: NetworkImage(
                               "https://i.pinimg.com/236x/ec/8e/99/ec8e9986006b2b803e3b23f7f17d94af.jpg"))),
                 ),
-                title: Text("Şehinşah", style: TextStyle(color: Colors.white)),
-                subtitle: Text(
+                title: const Text("Şehinşah",
+                    style: TextStyle(color: Colors.white)),
+                subtitle: const Text(
                   "Kadıköy",
                   style: TextStyle(color: Colors.white),
                 ),
-                trailing: Icon(
+                trailing: const Icon(
                   Icons.more_vert,
                   color: Colors.white,
                 ),
               ),
               Container(
                 height: 400,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                     image: DecorationImage(
                         fit: BoxFit.cover,
                         image: AssetImage('assets/sehinsah.jpeg'))),
@@ -43,7 +44,7 @@ class TimeLinePost extends StatelessWidget {
               ListTile(
                 leading: Flexible(
                     child: Wrap(
-                  children: [
+                  children: const [
                     Icon(
                       Icons.favorite_border,
                       color: Colors.white,
@@ -66,29 +67,31 @@ class TimeLinePost extends StatelessWidget {
                     )
                   ],
                 )),
-                trailing: Icon(
+                trailing: const Icon(
                   Icons.bookmark_outline_rounded,
                   color: Colors.white,
                 ),
               ),
-              Row(children: [
+              Row(children: const [
                 Padding(
-                  padding: const EdgeInsets.only(left: 18),
+                  padding: EdgeInsets.only(left: 18),
                   child: Text(
                     "1000 kişi beğendi",
                     style: TextStyle(color: Colors.white),
                   ),
                 ),
               ]),
-              Row(children: [
-                Padding(
-                  padding: const EdgeInsets.only(left: 18, top: 4),
-                  child: Text(
-                    "Şehinşah  naber",
-                    style: TextStyle(color: Colors.white),
+              Row(
+                children: const [
+                  Padding(
+                    padding: EdgeInsets.only(left: 18, top: 4),
+                    child: Text(
+                      "Şehinşah  naber",
+                      style: TextStyle(color: Colors.white),
+                    ),
                   ),
-                ),
-              ])
+                ],
+              ),
             ],
           );
         });
