@@ -48,33 +48,36 @@ class _myBottomNavBarState extends State<myBottomNavBar> {
           return AlertDialog(
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
-            title: Text("Fotoğraf Seçiniz Lütfen"),
+            title: Text("Fotoğraf Seçiniz "),
             content: Container(
               height: MediaQuery.of(context).size.height / 6,
               child: Column(
                 children: [
                   ElevatedButton(
-                      onPressed: () {
-                        Navigator.pop(context);
-                        getImage(ImageSource.gallery);
-                      },
-                      child: Row(
-                        children: [Icon(Icons.image), Text("From Gallery")],
-                      )),
+                    style: ElevatedButton.styleFrom(
+                        primary: Color.fromARGB(255, 63, 63, 63)),
+                    onPressed: () {
+                      Navigator.pop(context);
+                      getImage(ImageSource.gallery);
+                    },
+                    child: Row(
+                      children: [Text("From Gallery")],
+                    ),
+                  ),
                   ElevatedButton(
-                      onPressed: () {},
-                      child: Row(
-                        children: [Icon(Icons.camera), Text("from Camera")],
-                      ))
+                    style: ElevatedButton.styleFrom(
+                        primary: Color.fromARGB(255, 63, 63, 63)),
+                    onPressed: () {},
+                    child: Row(
+                      children: [Text("From Camera ")],
+                    ),
+                  ),
                 ],
               ),
             ),
           );
         });
   }
-
-
-
 
   @override
   Widget build(BuildContext context) {
