@@ -21,7 +21,6 @@ class myBottomNavBar extends StatefulWidget {
 
 // ignore: camel_case_types
 class _myBottomNavBarState extends State<myBottomNavBar> {
-  int _selectedIndex = 0;
   // void _onTapped(int index,BuildContext context) {
   //   setState(() {
   //     _selectedIndex = index;
@@ -33,13 +32,13 @@ class _myBottomNavBarState extends State<myBottomNavBar> {
   @override
   Widget build(BuildContext context) {
     return BottomNavigationBar(
-      currentIndex: context.read<NavigatorViewModel>().getCurrentIndex,
+      currentIndex: context.watch<NavigatorViewModel>().getCurrentIndex,
       onTap: (int index) {
-        setState(() {
-          _selectedIndex = index;
+        if (index == 2) {
+          print("basıldı");
+        } else {
           context.read<NavigatorViewModel>().setIndex(index);
-          //print(_selectedIndex);
-        });
+        }
       },
       type: BottomNavigationBarType.fixed,
       backgroundColor: Colors.black,
@@ -55,11 +54,7 @@ class _myBottomNavBarState extends State<myBottomNavBar> {
           label: "",
           activeIcon: const Icon(CupertinoIcons.search),
         ),
-        BottomNavigationBarItem(
-            icon: IconButton(
-                icon: Icon(Icons.add_box_outlined),
-                onPressed: () => print("basıldı")),
-            label: ""),
+        BottomNavigationBarItem(icon: Icon(Icons.add_box_outlined), label: ""),
         BottomNavigationBarItem(
             icon: Icon(Icons.movie_filter_outlined),
             label: "",

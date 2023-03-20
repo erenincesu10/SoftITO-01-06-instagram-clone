@@ -45,6 +45,8 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  //NavigatorViewModel get vm => Provider.of<NavigatorViewModel>(context);
+
   List<Widget> pages = [
     StoriesInstagram(),
     DiscoveryPage(),
@@ -56,6 +58,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       //backgroundColor: Colors.black,
+      //body: pages[vm.getCurrentIndex],
       body: pages[context.watch<NavigatorViewModel>().getCurrentIndex],
       //bottomNavigationBar: myBottomNavBar(),
     );
