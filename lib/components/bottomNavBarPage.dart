@@ -6,6 +6,8 @@ import 'package:go_router/go_router.dart';
 import 'package:instagram_clone/components/profile_page/profile_page_highlights.dart';
 import 'package:instagram_clone/components/profile_page/profilpage_tab.dart';
 import 'package:instagram_clone/main.dart';
+import 'package:instagram_clone/view_models/navigator_view_model.dart';
+import 'package:provider/provider.dart';
 
 import 'explore_page/discovery_gridview.dart';
 
@@ -20,74 +22,50 @@ class myBottomNavBar extends StatefulWidget {
 // ignore: camel_case_types
 class _myBottomNavBarState extends State<myBottomNavBar> {
   int _selectedIndex = 0;
-  void _onTapped(int index) {
-    setState(() {
-      _selectedIndex = index;
-      print(_selectedIndex);
-    });
-  }
+  // void _onTapped(int index,BuildContext context) {
+  //   setState(() {
+  //     _selectedIndex = index;
+  //     context.read<NavigatorViewModel>().setIndex(index);
+  //     print(_selectedIndex);
+  //   });
+  // }
 
   @override
   Widget build(BuildContext context) {
     return BottomNavigationBar(
-      currentIndex: _selectedIndex,
-      onTap: _onTapped,
+      currentIndex: context.read<NavigatorViewModel>().getCurrentIndex,
+      onTap: (int index) {
+        setState(() {
+          _selectedIndex = index;
+          context.read<NavigatorViewModel>().setIndex(index);
+          //print(_selectedIndex);
+        });
+      },
       type: BottomNavigationBarType.fixed,
       backgroundColor: Colors.black,
       unselectedItemColor: Colors.white,
       selectedItemColor: Colors.white,
       items: [
         BottomNavigationBarItem(
-          icon: IconButton(
-            icon: const Icon(Icons.home_filled),
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => MyHomePage(),
-                ),
-              );
-            },
-          ),
-          label: "",
-        ),
+            icon: Icon(CupertinoIcons.home),
+            label: "",
+            activeIcon: Icon(Icons.home_filled)),
         BottomNavigationBarItem(
-          icon: IconButton(
-              icon: const Icon(Icons.search),
-              onPressed: () => {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => GridDiscovery(),
-                      ),
-                    ),
-                  }),
+          icon: Icon(Icons.search),
           label: "",
           activeIcon: const Icon(CupertinoIcons.search),
         ),
         BottomNavigationBarItem(
             icon: IconButton(
-              icon: const Icon(Icons.add_box_outlined),
-              onPressed: () {
-                print("clicked");
-                //test code for button works
-              },
-            ),
+                icon: Icon(Icons.add_box_outlined),
+                onPressed: () => print("basıldı")),
             label: ""),
-        const BottomNavigationBarItem(
+        BottomNavigationBarItem(
             icon: Icon(Icons.movie_filter_outlined),
             label: "",
             activeIcon: Icon(Icons.movie_filter)),
         BottomNavigationBarItem(
-            icon: IconButton(
-              icon: const Icon(Icons.account_circle_outlined),
-              onPressed: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => ProfilePageHighlights()));
-              },
-            ),
+            icon: Icon(Icons.account_circle_outlined),
             label: "",
             activeIcon: const Icon(Icons.account_circle))
       ],

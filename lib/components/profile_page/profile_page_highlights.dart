@@ -13,24 +13,20 @@ class _ProfilePageHighlightsState extends State<ProfilePageHighlights> {
   @override
   // final width = MediaQuery.of(context).size.width;
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: ProfileAppBar(),
-      bottomNavigationBar: myBottomNavBar(),
-      body: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Container(
-          width: MediaQuery.of(context).size.width,
-          child: ListView(
-            scrollDirection: Axis.horizontal,
-            children: [
-              HighlightUser(),
-              HighlightUser(),
-              HighlightUser(),
-              HighlightUser(),
-              HighlightUser(),
-              HighlightAdd(),
-            ],
-          ),
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Container(
+        width: MediaQuery.of(context).size.width,
+        child: ListView(
+          scrollDirection: Axis.horizontal,
+          children: [
+            HighlightUser(),
+            HighlightUser(),
+            HighlightUser(),
+            HighlightUser(),
+            HighlightUser(),
+            HighlightAdd(),
+          ],
         ),
       ),
     );

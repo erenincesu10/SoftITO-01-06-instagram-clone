@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:instagram_clone/components/bottomNavBarPage.dart';
 
 import 'package:instagram_clone/components/profile_page/profile_page_highlights.dart';
 
@@ -14,6 +15,7 @@ class _ProfilePageState extends State<ProfilePage> {
   Widget build(BuildContext context) {
     return const Scaffold(
       body: ProfilePageHighlights(),
+      bottomNavigationBar: myBottomNavBar(),
     );
   }
 }

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:instagram_clone/components/bottomNavBarPage.dart';
 import 'package:instagram_clone/components/discovery_page/my_sliver_app_bar.dart';
 import 'package:instagram_clone/components/discovery_page/search_list.dart';
 import 'package:instagram_clone/components/discovery_page/sliver_grid.dart';
@@ -19,6 +20,7 @@ class _DiscoveryPageState extends State<DiscoveryPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black,
+      bottomNavigationBar: myBottomNavBar(),
       body: SafeArea(
         child: CustomScrollView(
           slivers: [
