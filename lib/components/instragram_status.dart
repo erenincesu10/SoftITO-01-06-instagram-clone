@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
-import 'package:instagram_clone/components/timeline_appbar.dart';
+import 'package:instagram_clone/components/home_page/timeline_appbar.dart';
 import 'package:instagram_clone/components/timeline_post.dart';
 
 class MessagePageStatus extends StatefulWidget {

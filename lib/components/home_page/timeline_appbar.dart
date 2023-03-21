@@ -3,8 +3,8 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:instagram_clone/components/message_page/message_page.dart';
 
-import 'chat_page/chat_page.dart';
-import 'custom_icon_button.dart';
+import '../chat_page/chat_page.dart';
+import '../custom_icon_button.dart';
 
 class TimelineAppbar extends StatelessWidget implements PreferredSizeWidget {
   const TimelineAppbar({super.key});
