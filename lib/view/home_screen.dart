@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:instagram_clone/components/bottomNavBarPage.dart';
-import 'package:instagram_clone/components/timeline_appbar.dart';
+import 'package:instagram_clone/components/home_page/timeline_appbar.dart';
 import 'package:instagram_clone/view/home/timeline_screen.dart';
 import 'package:instagram_clone/view_models/home_page_view_model.dart';
 import 'package:provider/provider.dart';
