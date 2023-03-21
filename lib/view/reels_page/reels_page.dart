@@ -1,3 +1,4 @@
+import 'package:faker/faker.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -69,7 +70,8 @@ class _ReelsContensState extends State<ReelsContens> {
       Container(
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height,
-        color: Colors.black,
+            decoration: BoxDecoration(
+              image: DecorationImage(fit: BoxFit.fill,image: NetworkImage('https://picsum.photos/500/500?random=${faker.randomGenerator.integer(10)}'))),
       ),
       Positioned(
           bottom: 10,
@@ -134,15 +136,18 @@ class _ReelsContensState extends State<ReelsContens> {
                 Row(
                   // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    CircleAvatar(
-                      radius: 15,
-                      foregroundImage: AssetImage("assets/sehinsah.jpeg"),
-                    ),
+      Container(
+        width: 50,
+        height: 50,
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              image: DecorationImage(fit: BoxFit.fill,image: NetworkImage('https://picsum.photos/500/500?random=${faker.randomGenerator.integer(10)}'))),
+      ),
                     SizedBox(
                       width: 10,
                     ),
                     Text(
-                      "Username",
+                      faker.internet.userName(),
                       style: TextStyle(color: Colors.white),
                     )
                   ],
