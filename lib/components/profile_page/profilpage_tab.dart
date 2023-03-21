@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:instagram_clone/components/profile_page/profile_page_highlights.dart';
 import 'package:instagram_clone/components/recorded_screen.dart';
+import 'package:instagram_clone/view/home_page/home_page.dart';
+import 'package:instagram_clone/view/home_page/home_page_profile.dart';
 import '../../widgets/profileHeaderWidget.dart';
 import '../timeline_post.dart';
 
@@ -15,19 +18,20 @@ class _ProfilPageTabState extends State<ProfilPageTab> {
   Widget build(BuildContext context) {
     return Container(
       color: Colors.black,
-      width: MediaQuery.of(context).size.width,
+      width:MediaQuery.of(context).size.width,
       height: 350,
       child: DefaultTabController(
         length: 2,
-        child: NestedScrollView(
-          headerSliverBuilder: (context, _) {
-            return [
-              SliverList(
-                  delegate: SliverChildListDelegate([
-                profileHeaderWidget(context),
-              ]))
-            ];
-          },
+        child: Scaffold(
+          backgroundColor: Colors.black,
+          // headerSliverBuilder: (context, _) {
+          //   return [
+          //     SliverList(
+          //         delegate: SliverChildListDelegate([
+          //       profileHeaderWidget(context),
+          //     ]))
+          //   ];
+          // },
           body: Column(
             children: const [
               Material(
@@ -55,7 +59,7 @@ class _ProfilPageTabState extends State<ProfilPageTab> {
               ),
               Expanded(
                   child: TabBarView(
-                children: [TimeLinePost(), Recorded()],
+                children: [HomePageProfile(),HomePageProfile()],
               ))
             ],
           ),

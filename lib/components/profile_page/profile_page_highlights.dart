@@ -16,7 +16,7 @@ class _ProfilePageHighlightsState extends State<ProfilePageHighlights> {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Container(
-        width: MediaQuery.of(context).size.width,
+          height: 20,
         child: ListView(
           scrollDirection: Axis.horizontal,
           children: [

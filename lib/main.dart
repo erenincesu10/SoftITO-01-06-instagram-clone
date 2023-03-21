@@ -5,9 +5,10 @@ import 'package:instagram_clone/components/instagram_stories.dart';
 import 'package:instagram_clone/components/instragram_status.dart';
 import 'package:instagram_clone/components/notification_page.dart';
 import 'package:instagram_clone/components/profiluser_widgets.dart';
-import 'package:instagram_clone/components/timeline_appbar.dart';
+import 'package:instagram_clone/components/home_page/timeline_appbar.dart';
 import 'package:instagram_clone/components/timeline_post.dart';
 import 'package:instagram_clone/view/discovery_page/discovery_page.dart';
+import 'package:instagram_clone/view/home_page/home_page.dart';
 import 'package:instagram_clone/view/profile_page/profile_page.dart';
 import 'package:instagram_clone/view/reels_page/reels_page.dart';
 import 'package:instagram_clone/view_models/navigator_view_model.dart';
@@ -48,7 +49,7 @@ class _MyHomePageState extends State<MyHomePage> {
   //NavigatorViewModel get vm => Provider.of<NavigatorViewModel>(context);
 
   List<Widget> pages = [
-    StoriesInstagram(),
+    HomePage(),
     DiscoveryPage(),
     Container(),
     ReelsPage(),

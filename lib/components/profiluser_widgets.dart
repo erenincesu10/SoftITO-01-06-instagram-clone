@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:instagram_clone/components/profile_page/profile_page_highlights.dart';
 import 'package:instagram_clone/components/profile_page/profilpage_tab.dart';
 
 class ProfilUserWidget extends StatefulWidget {
@@ -14,6 +15,7 @@ class _ProfilUserWidgetState extends State<ProfilUserWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
+      color: Colors.black,
       width: double.infinity,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -111,6 +113,7 @@ class _ProfilUserWidgetState extends State<ProfilUserWidget> {
                   ],
                 ),
               ),
+             
             ],
           ),
           SizedBox(
@@ -181,10 +184,14 @@ class _ProfilUserWidgetState extends State<ProfilUserWidget> {
                     Icons.person_add,
                     color: Colors.white,
                   ),
-                )
+                ),
+                // ProfilePageHighlights()
               ],
             ),
           ),
+          Container(width: MediaQuery.of(context).size.width,
+          height: 100,
+            child: ProfilePageHighlights()),
           ProfilPageTab()
         ],
       ),
