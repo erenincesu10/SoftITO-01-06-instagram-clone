@@ -8,36 +8,36 @@ import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:instagram_clone/components/bottomNavBarPage.dart';
 import 'package:instagram_clone/components/home_page/timeline_appbar.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+class HomePageProfile extends StatefulWidget {
+  const HomePageProfile({super.key});
 
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<HomePageProfile> createState() => _HomePageProfileState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _HomePageProfileState extends State<HomePageProfile> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-       appBar: TimelineAppbar(),
+      // appBar: TimelineAppbar(),
       backgroundColor: Colors.black,
-      bottomNavigationBar: myBottomNavBar(),
+      //bottomNavigationBar: myBottomNavBar(),
       body: SingleChildScrollView(
         child: SafeArea(
           child: Column(
             children: [
-              Container(
-                height: 100,
-                child: ListView.builder(
-                  shrinkWrap: true,
-                  scrollDirection: Axis.horizontal,
-                  itemCount: 15,
-                  itemBuilder: ((context, index) {
-                  return _story(index);
-                })),
-              ),
-              Divider(height: 2,color: Colors.grey,),
-              SizedBox(height: 10,),
+              // Container(
+              //   height: 100,
+              //   child: ListView.builder(
+              //     shrinkWrap: true,
+              //     scrollDirection: Axis.horizontal,
+              //     itemCount: 15,
+              //     itemBuilder: ((context, index) {
+              //     return _story(index);
+              //   })),
+              // ),
+              // Divider(height: 2,color: Colors.grey,),
+              // SizedBox(height: 10,),
             ListView.builder(
               physics: const NeverScrollableScrollPhysics(),
               shrinkWrap: true,
