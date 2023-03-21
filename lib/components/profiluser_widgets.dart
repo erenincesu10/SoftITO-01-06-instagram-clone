@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:instagram_clone/components/profile_page/profilpage_tab.dart';
 
 class ProfilUserWidget extends StatefulWidget {
   const ProfilUserWidget({super.key});
@@ -183,7 +184,8 @@ class _ProfilUserWidgetState extends State<ProfilUserWidget> {
                 )
               ],
             ),
-          )
+          ),
+          ProfilPageTab()
         ],
       ),
     );
